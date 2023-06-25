@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.heading{
+    display: flex;
+    background-color: wheat;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.08);
+    justify-content: center;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue";
+    background-color: darkslategrey;
+
+}
+body > div{
+    margin: auto;
+}
+div >div{
+    margin: auto;
+}
+
+.message{
+    display: flex;
+    background-color: pink;
+    align-items:center;
+    padding: 20px 0;
+    border-radius: 5px;
+    border-left: 1rem solid;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.08);
+}
+.read{
+    display: flex;
+    background-color: lightskyblue;
+    align-items:center;
+    padding: 20px 0;
+    border-radius: 5px;
+    border-left: 1rem solid;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.08);
+}
+.delete{
+    display: flex;
+    background-color: firebrick;
+    align-items:center;
+    padding: 20px 0;
+    border-radius: 5px;
+    border-left: 1rem solid;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.08);
+}
+.message+.read{
+    margin-top: 20px;
+}
+.read+.delete{
+    margin-top:20px ;
+}
+.message__icon{
+    font-size: 24px;
+}
+.message__icon,
+.message__close{
+    padding:0 16px ;
+}
+
+.message__body{
+}
+.message__Tittle{
+
+}
+.message__msg{
+
+}
+.message__close{
+    font-size: 20px;
+    color: rgba(0,0,0,0.3);
+}
