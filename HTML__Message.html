@@ -10,14 +10,15 @@
 <header class="heading">
     <h1 class="heading__text">Message Menu</h1>
 </header>
-<div>
-    <div class="message">
-        <div class="message__icon">
+<div></div>
+<div  id="message">
+    <div onclick="showNoti()" class="message notification">
+        <div  class="message__icon">
             <i class="fa fa-bell" aria-hidden="true"></i>
         </div>
         <div class="message__body">
             <h2 class="message__Tittle">New Message</h2>
-            <p class="message__msg">You have a new message from someone!!!</p>
+            <p class="message__msg">New message in your chat box !!!</p>
         </div>
         <div class="message__close">
             <i class="fa fa-times" aria-hidden="true"></i>
@@ -25,13 +26,13 @@
     </div>
 
 
-    <div class="read">
+    <div onclick="showRead()" class="message read">
         <div class="message__icon">
             <i class="fa fa-book" aria-hidden="true"></i>
         </div>
         <div class="message__body">
             <h2 class="message__Tittle">Read</h2>
-            <p class="message__msg">Read Message on your box chat !!!</p>
+            <p class="message__msg">Read message on your box chat !!!</p>
         </div>
         <div class="message__close">
             <i class="fa fa-times" aria-hidden="true"></i>
@@ -39,18 +40,24 @@
     </div>
 
 
-    <div class="delete">
+    <div onclick="showDelete()" class="message delete">
         <div class="message__icon">
             <i class="fa fa-trash" aria-hidden="true"></i>
         </div>
         <div class="message__body">
             <h2 class="message__Tittle">Delete</h2>
-            <p class="message__msg">Delete messages in box chat !!!</p>
+            <p class="message__msg">Delete messages in your box chat !!!</p>
         </div>
         <div class="message__close">
             <i class="fa fa-times" aria-hidden="true"></i>
         </div>
     </div>
 </div>
+<div id="notify">
+
+
+</div>
 </body>
+<script src="Message.js"></script>
+
 </html>

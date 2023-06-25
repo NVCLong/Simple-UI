@@ -14,10 +14,10 @@
 }
 
 body {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", fangsong;
     background-color: darkslategrey;
 
 }
@@ -28,7 +28,9 @@ div >div{
     margin: auto;
 }
 
-.message{
+
+
+.message.notification{
     display: flex;
     background-color: pink;
     align-items:center;
@@ -37,14 +39,32 @@ div >div{
     border-left: 1rem solid;
     box-shadow: 0 5px 8px rgba(0,0,0,0.08);
 }
+@keyframes slideinLeft {
+    from{
+        transform: translateX(432px);
+    }
+    to{
+        transform: translateX(0%);
+    }
+
+}
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
 .read{
     display: flex;
     background-color: lightskyblue;
     align-items:center;
     padding: 20px 0;
     border-radius: 5px;
-    border-left: 1rem solid;
+    border-left: 1rem solid aquamarine;
     box-shadow: 0 5px 8px rgba(0,0,0,0.08);
+
 }
 .delete{
     display: flex;
@@ -52,17 +72,19 @@ div >div{
     align-items:center;
     padding: 20px 0;
     border-radius: 5px;
-    border-left: 1rem solid;
+    border-left: 1rem solid olivedrab;
     box-shadow: 0 5px 8px rgba(0,0,0,0.08);
+
 }
 .message+.read{
-    margin-top: 20px;
+    margin-top: 12px;
 }
 .read+.delete{
-    margin-top:20px ;
+    margin-top:12px ;
 }
 .message__icon{
     font-size: 24px;
+    color: black;
 }
 .message__icon,
 .message__close{
@@ -70,6 +92,7 @@ div >div{
 }
 
 .message__body{
+    flex-grow: 1;
 }
 .message__Tittle{
 
@@ -81,3 +104,41 @@ div >div{
     font-size: 20px;
     color: rgba(0,0,0,0.3);
 }
+
+#notify{
+    position: fixed;
+    top: 100px;
+    right: 32px;
+}
+.notify.notification{
+    display: flex;
+    background-color: lightskyblue;
+    align-items:center;
+    padding: 10px 0;
+    border-radius: 5px;
+    border-left: 1rem solid aquamarine;
+    margin-top: 10px;
+    animation: slideinLeft ease 0.3s, fadeOut linear 1s 3s forwards;
+}
+.notify.read{
+    display: flex;
+    background-color: lightpink;
+    align-items:center;
+    padding: 10px 0;
+    border-radius: 5px;
+    border-left: 1rem solid aquamarine;
+    margin-top: 10px;
+    animation: slideinLeft ease 0.3s, fadeOut linear 1s 3s forwards;
+}
+.notify.delete{
+    display: flex;
+    background-color: red;
+    align-items:center;
+    padding: 10px 0;
+    border-radius: 5px;
+    border-left: 1rem solid aquamarine;
+    margin-top: 10px;
+    animation: slideinLeft ease 0.3s, fadeOut linear 1s 3s forwards;
+}
+
+
